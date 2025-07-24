@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntora - Estado del Proyecto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <header class="text-center mb-12">
+            <h1 class="text-5xl font-bold text-[#003f5c]">Proyecto Syntora</h1>
+            <p class="text-xl text-gray-600 mt-2">Informe de Avance y Planificación</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Sección de Resumen General -->
+            <div class="md:col-span-2 lg:col-span-3 card">
+                <h2 class="text-2xl font-bold text-[#003f5c] mb-4">Resumen General del Proyecto</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <p class="text-gray-700 leading-relaxed">
+                            Este informe detalla el estado actual del proyecto "Syntora". Hemos completado una fase significativa de desarrollo, implementando funcionalidades clave y la estructura base de la aplicación. Actualmente, nos encontramos en una etapa de refinamiento y adición de nuevas características solicitadas, con un plan claro para las integraciones finales que requieren el entorno de producción. A continuación, se presenta un desglose visual del progreso.
+                        </p>
+                        <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                            <div class="p-4 bg-blue-50 rounded-lg">
+                                <p class="text-3xl font-bold text-[#003f5c]">38</p>
+                                <p class="text-sm text-gray-600">Funcionalidades Totales</p>
+                            </div>
+                            <div class="p-4 bg-green-50 rounded-lg">
+                                <p class="text-3xl font-bold text-green-600">31</p>
+                                <p class="text-sm text-gray-600">Completadas</p>
+                            </div>
+                            <div class="p-4 bg-yellow-50 rounded-lg">
+                                <p class="text-3xl font-bold text-yellow-600">0</p>
+                                <p class="text-sm text-gray-600">En Proceso</p>
+                            </div>
+                            <div class="p-4 bg-red-50 rounded-lg">
+                                <p class="text-3xl font-bold text-red-600">7</p>
+                                <p class="text-sm text-gray-600">Pendientes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="progressChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Desglose de Tareas -->
+            <div class="lg:col-span-2 card">
+                <h2 class="text-2xl font-bold text-[#003f5c] mb-4">Desglose de Tareas por Categoría</h2>
+                <p class="text-gray-600 mb-4">Análisis del estado de las funcionalidades agrupadas por su área de impacto en el proyecto. Esto nos permite visualizar dónde se ha concentrado el esfuerzo y qué áreas requieren más atención.</p>
+                <div class="chart-container h-96">
+                    <canvas id="tasksByCategoryChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Sección de Presupuesto y Tiempo -->
+            <div class="lg:col-span-1 card flex flex-col justify-between">
+                <div>
+                    <h2 class="text-2xl font-bold text-[#003f5c] mb-4">Presupuesto y Cronograma</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="font-semibold text-lg text-gray-700">Cotización Final</h3>
+                            <p class="text-4xl font-bold text-[#4d80a3] mt-1">$200 <span class="text-xl font-normal text-gray-500">USD</span></p>
+                            <p class="text-sm text-gray-500">Cubre todas las funcionalidades listadas, incluyendo las nuevas solicitudes.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-gray-700">Tiempo Estimado de Entrega</h3>
+                            <p class="text-4xl font-bold text-[#4d80a3] mt-1">2-5 <span class="text-xl font-normal text-gray-500">días</span></p>
+                            <p class="text-sm text-gray-500">Para completar las tareas pendientes y en progreso.</p>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-lg text-gray-700">Próximo Hito</h3>
+                            <p class="text-2xl font-bold text-[#4d80a3] mt-1">Migración a Hosting</p>
+                            <p class="text-sm text-gray-500">Se realizará una vez completado el pago para implementar las integraciones finales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Tareas Completadas -->
+            <div class="lg:col-span-3 card">
+                <h2 class="text-2xl font-bold text-[#003f5c] mb-4">Funcionalidades Completadas ✔️</h2>
+                <p class="text-gray-600 mb-4">El núcleo de la aplicación ya está construido y funcional. Estos son los componentes que ya han sido implementados y probados con éxito, incluyendo todas las solicitudes previas.</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 columns-1 md:columns-2">
+                    <li>Scraping de resultados de la lotería El Dorado (mañana, tarde, noche).</li>
+                    <li>Secciones personalizadas para "Rifas Finalizadas" y "Rifas Ganadoras".</li>
+                    <li>Barra de progreso de venta de tickets funcional.</li>
+                    <li>Página de Términos y Condiciones.</li>
+                    <li>Chat en tiempo real con asesores.</li>
+                    <li>Módulo "Consultar Mis Tickets" con el estilo requerido.</li>
+                    <li>Flujo de "Comprar Tickets" con el estilo requerido.</li>
+                    <li>Edición de botones de rifa.</li>
+                    <li>Panel de administración de rifas completo.</li>
+                    <li>Configuración general del sitio (redes sociales, FAQs, correo, plantillas, legal, etc.).</li>
+                    <li>Dashboard con estadísticas clave (ingresos, usuarios, rifas).</li>
+                    <li>Gestión de usuarios desde el panel de administración.</li>
+                    <li>Herramienta para selección de ganadores.</li>
+                    <li>Hacer la fecha de la rifa opcional.</li>
+                    <li>Permitir eliminar rifas con errores.</li>
+                    <li>Filtrar para mostrar solo rifas disponibles.</li>
+                    <li>Crear apartado de rifas vencidas.</li>
+                    <li>Mejorar la lógica del carrusel de rifas.</li>
+                    <li>Implementar envío de correos masivos.</li>
+                    <li>Añadir opción de registro en la página de login.</li>
+                    <li>Ajustar el tamaño de las rifas en vista de escritorio.</li>
+                    <li>Mostrar porcentaje de venta sobre la imagen de la rifa.</li>
+                    <li>Mostrar solo porcentaje de venta (no cantidad de tickets).</li>
+                    <li>Limitar compra de tickets según disponibilidad.</li>
+                    <li>Mostrar pop-up de términos y condiciones al comprar.</li>
+                    <li>Integrar un método de pago de prueba.</li>
+                    <li>Permitir edición de plantillas de mensajes.</li>
+                    <li>Mostrar solo el ticket ganador en la sección de ganadores.</li>
+                    <li>Solucionar problema con la adición de iconos de redes sociales.</li>
+                    <li>Implementar sección para logos de loterías.</li>
+                    <li>Corregir error al subir imágenes.</li>
+                </ul>
+            </div>
+            
+            <!-- Sección de Tareas Pendientes -->
+            <div class="lg:col-span-3 card">
+                <h2 class="text-2xl font-bold text-[#003f5c] mb-4">Nuevas Solicitudes y Mejoras Pendientes ⏳</h2>
+                <p class="text-gray-600 mb-4">Estas son las nuevas funcionalidades o ajustes que se han añadido a la lista de tareas pendientes para su implementación.</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 columns-1 md:columns-2">
+                    <li>La terminal de pagos (implementar funciones de métodos de pago y recibo manualmente, con edición en el panel de control).</li>
+                    <li>Implementar el mensaje de la cantidad máxima de tickets por comprar y cuando se sobrepase la cantidad límite de los boletos vendidos.</li>
+                    <li>Los términos y condiciones de compra (modificar desde el panel de administrador).</li>
+                    <li>Publicar en la página principal los resultados.</li>
+                    <li>Realizar como tabla el apartado de boletos vendidos.</li>
+                </ul>
+            </div>
+            
+            <!-- Sección de Integraciones Futuras -->
+            <div class="lg:col-span-3 card">
+                <h2 class="text-2xl font-bold text-[#003f5c] mb-4">Integraciones Post-Migración 🚀</h2>
+                <p class="text-gray-600 mb-4">Las siguientes integraciones de servicios de terceros se realizarán una vez que el proyecto esté alojado en el servidor de producción final, ya que requieren configuración específica del entorno.</p>
+                <div class="flex flex-col md:flex-row gap-4 mt-4">
+                    <div class="flex-1 p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h3 class="font-bold text-lg text-[#4d80a3]">Mailtrap con SendGrid</h3>
+                        <p class="text-sm text-gray-600 mt-1">Para el envío de correos electrónicos transaccionales y masivos de forma confiable.</p>
+                    </div>
+                    <div class="flex-1 p-4 border border-gray-200 rounded-lg bg-gray-50">
+                        <h3 class="font-bold text-lg text-[#4d80a3]">Terminal de Pagos con Wompi</h3>
+                        <p class="text-sm text-gray-600 mt-1">Para procesar pagos de forma segura y automatizada, reemplazando el método manual.</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="text-center mt-12 text-gray-500 text-sm">
+            <p>Informe generado el 23 de julio de 2025. Este documento es una representación visual del estado actual del proyecto Syntora.</p>
+            <p>Confirmación: No se ha utilizado SVG ni Mermaid.js en la generación de este informe.</p>
+        </footer>
+    </div>
+
+    <script>
+        const progressData = {
+            labels: ['Completado', 'En Progreso', 'Pendiente'],
+            datasets: [{
+                label: 'Estado de Tareas',
+                data: [31, 0, 7],
+                backgroundColor: [
+                    '#4CAF50',
+                    '#FFC107',
+                    '#F44336'
+                ],
+                hoverOffset: 4
+            }]
+        };
+
+        const tasksByCategoryData = {
+            labels: [
+                'Funcionalidades Principales (Core)',
+                'Panel de Administración',
+                'Mejoras de UI/UX',
+                'Integraciones Externas'
+            ],
+            datasets: [
+                {
+                    label: 'Completado',
+                    data: [9, 14, 8, 0],
+                    backgroundColor: '#4CAF50',
+                },
+                {
+                    label: 'En Progreso',
+                    data: [0, 0, 0, 0],
+                    backgroundColor: '#FFC107',
+                },
+                {
+                    label: 'Pendiente',
+                    data: [1, 3, 1, 2],
+                    backgroundColor: '#F44336',
+                }
+            ]
+        };
+
+        const chartConfig = {
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        font: {
+                            family: 'Roboto, sans-serif'
+                        }
+                    }
+                },
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                                return label.join(' ');
+                            }
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        const ctxProgress = document.getElementById('progressChart').getContext('2d');
+        new Chart(ctxProgress, {
+            type: 'doughnut',
+            data: progressData,
+            options: {
+                ...chartConfig,
+                responsive: true,
+                maintainAspectRatio: false,
+            }
+        });
+
+        const ctxTasks = document.getElementById('tasksByCategoryChart').getContext('2d');
+        new Chart(ctxTasks, {
+            type: 'bar',
+            data: tasksByCategoryData,
+            options: {
+                ...chartConfig,
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        stacked: true,
+                    },
+                    y: {
+                        stacked: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
