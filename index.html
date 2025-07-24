@@ -59,16 +59,16 @@
                         </p>
                         <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
                             <div class="p-4 bg-blue-50 rounded-lg">
-                                <p class="text-3xl font-bold text-[#003f5c]">38</p>
+                                <p class="text-3xl font-bold text-[#003f5c]">39</p>
                                 <p class="text-sm text-gray-600">Funcionalidades Totales</p>
                             </div>
                             <div class="p-4 bg-green-50 rounded-lg">
-                                <p class="text-3xl font-bold text-green-600">31</p>
-                                <p class="text-sm text-gray-600">Completadas</p>
+                                <p class="text-3xl font-bold text-green-600">13</p>
+                                <p class="text-sm text-gray-600">Iniciales Completadas</p>
                             </div>
-                            <div class="p-4 bg-yellow-50 rounded-lg">
-                                <p class="text-3xl font-bold text-yellow-600">0</p>
-                                <p class="text-sm text-gray-600">En Proceso</p>
+                            <div class="p-4 bg-green-50 rounded-lg">
+                                <p class="text-3xl font-bold text-green-600">19</p>
+                                <p class="text-sm text-gray-600">Adicionales Completadas</p>
                             </div>
                             <div class="p-4 bg-red-50 rounded-lg">
                                 <p class="text-3xl font-bold text-red-600">7</p>
@@ -115,12 +115,12 @@
                 </div>
             </div>
 
-            <!-- Sección de Tareas Completadas -->
+            <!-- Sección de Funcionalidades Iniciales Completadas -->
             <div class="lg:col-span-3 card">
-                <h2 class="text-2xl font-bold text-[#003f5c] mb-4">Funcionalidades Completadas ✔️</h2>
-                <p class="text-gray-600 mb-4">El núcleo de la aplicación ya está construido y funcional. Estos son los componentes que ya han sido implementados y probados con éxito, incluyendo todas las solicitudes previas.</p>
+                <h2 class="text-2xl font-bold text-[#003f5c] mb-4">Funcionalidades Iniciales Completadas ✔️</h2>
+                <p class="text-gray-600 mb-4">El núcleo de la aplicación ya está construido y funcional. Estos son los componentes base que han sido implementados.</p>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 columns-1 md:columns-2">
-                    <li>Scraping de resultados de la lotería El Dorado (mañana, tarde, noche).</li>
+                    <li>Scraping de resultados de la lotería El Dorado (mañana, tarde y noche).</li>
                     <li>Secciones personalizadas para "Rifas Finalizadas" y "Rifas Ganadoras".</li>
                     <li>Barra de progreso de venta de tickets funcional.</li>
                     <li>Página de Términos y Condiciones.</li>
@@ -133,37 +133,47 @@
                     <li>Dashboard con estadísticas clave (ingresos, usuarios, rifas).</li>
                     <li>Gestión de usuarios desde el panel de administración.</li>
                     <li>Herramienta para selección de ganadores.</li>
-                    <li>Hacer la fecha de la rifa opcional.</li>
-                    <li>Permitir eliminar rifas con errores.</li>
-                    <li>Filtrar para mostrar solo rifas disponibles.</li>
-                    <li>Crear apartado de rifas vencidas.</li>
-                    <li>Mejorar la lógica del carrusel de rifas.</li>
-                    <li>Implementar envío de correos masivos.</li>
-                    <li>Añadir opción de registro en la página de login.</li>
-                    <li>Ajustar el tamaño de las rifas en vista de escritorio.</li>
-                    <li>Mostrar porcentaje de venta sobre la imagen de la rifa.</li>
-                    <li>Mostrar solo porcentaje de venta (no cantidad de tickets).</li>
-                    <li>Limitar compra de tickets según disponibilidad.</li>
-                    <li>Mostrar pop-up de términos y condiciones al comprar.</li>
-                    <li>Integrar un método de pago de prueba.</li>
-                    <li>Permitir edición de plantillas de mensajes.</li>
-                    <li>Mostrar solo el ticket ganador en la sección de ganadores.</li>
-                    <li>Solucionar problema con la adición de iconos de redes sociales.</li>
-                    <li>Implementar sección para logos de loterías.</li>
-                    <li>Corregir error al subir imágenes.</li>
+                </ul>
+            </div>
+
+            <!-- Sección de Funcionalidades Adicionales Completadas -->
+            <div class="lg:col-span-3 card">
+                <h2 class="text-2xl font-bold text-[#003f5c] mb-4">Funcionalidades Adicionales Completadas ✔️</h2>
+                <p class="text-gray-600 mb-4">Estas son las mejoras y funcionalidades adicionales que me confirmaste como ya terminadas.</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 columns-1 md:columns-2">
+                    <li>Creación de rifa: Fecha no obligatoria y campo de observación.</li>
+                    <li>Solución de error al subir fotos.</li>
+                    <li>Opción para eliminar rifas.</li>
+                    <li>Mostrar solo rifas disponibles.</li>
+                    <li>Apartado de rifas vencidas (administrador).</li>
+                    <li>Lógica del carrusel de rifas (no repetición, orden por disponibilidad).</li>
+                    <li>Posibilidad de enviar mensajes masivos a correos electrónicos registrados.</li>
+                    <li>Opción de registro en la página de login al momento de la compra.</li>
+                    <li>Ajuste del tamaño de las rifas en la vista de escritorio.</li>
+                    <li>Mostrar porcentaje de avance de la rifa debajo de la imagen.</li>
+                    <li>Mostrar solo porcentaje grande (0% a 100%) sin cantidad de tickets.</li>
+                    <li>Límite de compra de tickets según disponibilidad.</li>
+                    <li>Ventana emergente de términos y condiciones al comprar.</li>
+                    <li>Método de pago para pruebas.</li>
+                    <li>Posibilidad de editar plantillas de mensajes en el panel administrativo.</li>
+                    <li>Mostrar únicamente el ticket ganador en el apartado de ganador.</li>
+                    <li>Solución para agregar iconos de redes sociales.</li>
+                    <li>Ubicación para los logos de las loterías.</li>
                 </ul>
             </div>
             
             <!-- Sección de Tareas Pendientes -->
             <div class="lg:col-span-3 card">
-                <h2 class="text-2xl font-bold text-[#003f5c] mb-4">Nuevas Solicitudes y Mejoras Pendientes ⏳</h2>
-                <p class="text-gray-600 mb-4">Estas son las nuevas funcionalidades o ajustes que se han añadido a la lista de tareas pendientes para su implementación.</p>
+                <h2 class="text-2xl font-bold text-[#003f5c] mb-4">Tareas Pendientes ⏳</h2>
+                <p class="text-gray-600 mb-4">Estas son las funcionalidades que quedan por implementar en la fase actual del proyecto.</p>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 columns-1 md:columns-2">
                     <li>La terminal de pagos (implementar funciones de métodos de pago y recibo manualmente, con edición en el panel de control).</li>
                     <li>Implementar el mensaje de la cantidad máxima de tickets por comprar y cuando se sobrepase la cantidad límite de los boletos vendidos.</li>
                     <li>Los términos y condiciones de compra (modificar desde el panel de administrador).</li>
                     <li>Publicar en la página principal los resultados.</li>
-                    <li>Realizar como tabla el apartado de boletos vendidos.</li>
+                    <li>Realizar como tabla el apartado de boletos vendidos (con barra de búsqueda y datos completos del comprador).</li>
+                    <li>Remover el footer mal formado de la página.</li>
+                    <li>Reforzar el login y registro.</li>
                 </ul>
             </div>
             
@@ -193,14 +203,14 @@
 
     <script>
         const progressData = {
-            labels: ['Completado', 'En Progreso', 'Pendiente'],
+            labels: ['Iniciales Completadas', 'Adicionales Completadas', 'Pendientes'],
             datasets: [{
                 label: 'Estado de Tareas',
-                data: [31, 0, 7],
+                data: [13, 19, 7],
                 backgroundColor: [
-                    '#4CAF50',
-                    '#FFC107',
-                    '#F44336'
+                    '#4CAF50', // Verde para Iniciales Completadas
+                    '#8BC34A', // Verde más claro para Adicionales Completadas
+                    '#F44336'  // Rojo para Pendientes
                 ],
                 hoverOffset: 4
             }]
@@ -216,17 +226,12 @@
             datasets: [
                 {
                     label: 'Completado',
-                    data: [9, 14, 8, 0],
+                    data: [7, 13, 12, 0],
                     backgroundColor: '#4CAF50',
                 },
                 {
-                    label: 'En Progreso',
-                    data: [0, 0, 0, 0],
-                    backgroundColor: '#FFC107',
-                },
-                {
                     label: 'Pendiente',
-                    data: [1, 3, 1, 2],
+                    data: [2, 1, 2, 0], // Only "Tareas Pendientes" are reflected here
                     backgroundColor: '#F44336',
                 }
             ]
